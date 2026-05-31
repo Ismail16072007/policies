@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy | Rajput Designs Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Kanit", sans-serif;
+            background: #042C53;
+            color: #ffffff;
+            overflow-x: clip;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(4, 44, 83, 0.95);
+            border-bottom: 1px solid rgba(55, 138, 221, 0.1);
+            padding: 1.5rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #378ADD;
+        }
+
+        .back-link svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-link:hover svg {
+            transform: translateX(-4px);
+        }
+
+        .logo {
+            height: 45px;
+            width: auto;
+        }
+
+        /* Main Content */
+        main {
+            padding: 4rem 0 6rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.6s ease 0.1s backwards;
+        }
+
+        .icon-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: rgba(55, 138, 221, 0.1);
+            border: 1px solid rgba(55, 138, 221, 0.3);
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 12px rgba(55, 138, 221, 0.2);
+        }
+
+        .icon-box svg {
+            width: 40px;
+            height: 40px;
+            color: #378ADD;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 6vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .title-gradient {
+            display: inline;
+        }
+
+        .title-white {
+            color: #ffffff;
+        }
+
+        .title-blue {
+            color: #378ADD;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+            font-weight: 300;
+        }
+
+        /* Intro Box */
+        .intro-box {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(55, 138, 221, 0.08);
+            border: 1px solid rgba(55, 138, 221, 0.25);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.6s ease 0.2s backwards;
+        }
+
+        .intro-box p {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Sections */
+        .sections {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        .section {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background: rgba(55, 138, 221, 0.08);
+            border: 1px solid rgba(55, 138, 221, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem 2rem;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease backwards;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.3s; }
+        .section:nth-child(2) { animation-delay: 0.35s; }
+        .section:nth-child(3) { animation-delay: 0.4s; }
+        .section:nth-child(4) { animation-delay: 0.45s; }
+        .section:nth-child(5) { animation-delay: 0.5s; }
+        .section:nth-child(6) { animation-delay: 0.55s; }
+        .section:nth-child(7) { animation-delay: 0.6s; }
+
+        .section:hover {
+            border-color: #378ADD;
+        }
+
+        .section h2 {
+            color: #378ADD;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        .section p {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            text-align: center;
+            padding: 2rem 0;
+            animation: fadeInUp 0.6s ease 0.65s backwards;
+        }
+
+        .cta-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #378ADD;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .cta-link:hover {
+            color: #ffffff;
+        }
+
+        .cta-link svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-link:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 2rem 0 3rem;
+            }
+
+            .page-header {
+                margin-bottom: 2rem;
+            }
+
+            h1 {
+                margin-bottom: 0.5rem;
+            }
+
+            .intro-box,
+            .section {
+                padding: 1.25rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="https://www.rajputdesignsstudio.com" class="back-link">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span>Back to Home</span>
+            </a>
+            <img src="https://i.postimg.cc/FFL8k0MJ/Rajput-Desgins-Logo-without-background-for-website-01.png" alt="Rajput Designs Studio" class="logo">
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <div class="icon-box">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                </svg>
+            </div>
+            <h1>
+                <span class="title-white">Refund </span>
+                <span class="title-blue">Policy</span>
+            </h1>
+            <p class="subtitle">Last updated: May 31, 2026 | Rajput Designs Studio</p>
+        </div>
+
+        <div class="intro-box">
+            <p>We want every client to be happy with their experience at Rajput Designs Studio. Please read this policy carefully so you understand how refunds work before placing an order. If you have any questions, reach out before purchasing and we will be happy to help.</p>
+        </div>
+
+        <div class="sections">
+            <div class="section">
+                <h2>1. General Policy</h2>
+                <p>Due to the custom nature of design work, all sales are generally non-refundable once work has begun. We invest significant time and creative effort into every project from the very start.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Before Work Begins</h2>
+                <p>If you cancel your order before any work has started, you are eligible for a full refund. Please contact us as soon as possible if you wish to cancel before the project kicks off.</p>
+            </div>
+
+            <div class="section">
+                <h2>3. After Work Begins</h2>
+                <p>Once the project has started and initial concepts have been delivered, no refund will be issued. This is because significant time and creative effort has already been invested into your project.</p>
+            </div>
+
+            <div class="section">
+                <h2>4. Revision Policy</h2>
+                <p>If you are unsatisfied with the work, we will work with you through the agreed revision rounds to reach a satisfactory result before considering any refund request. Our goal is always your satisfaction.</p>
+            </div>
+
+            <div class="section">
+                <h2>5. Exceptions</h2>
+                <p>Refunds may be considered on a case by case basis in exceptional circumstances at the sole discretion of Rajput Designs Studio.</p>
+            </div>
+
+            <div class="section">
+                <h2>6. How to Request</h2>
+                <p>To raise a refund concern, contact us at: Email: contact@rajputdesignsstudio.com | Website: www.rajputdesignsstudio.com</p>
+            </div>
+
+            <div class="section">
+                <h2>7. Processing Time</h2>
+                <p>If a refund is approved, it will be processed within 7 to 10 business days through the original payment method.</p>
+            </div>
+        </div>
+
+        <div class="footer-cta">
+            <a href="mailto:contact@rajputdesignsstudio.com" class="cta-link">
+                Have a question? Contact Us
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
